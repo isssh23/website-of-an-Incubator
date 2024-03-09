@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Service</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="events.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.1/css/fontawesome.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css">
+    <link rel="stylesheet"  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" integrity="sha512-tS3S5qG0BlhnQROyJXvNjeEM4UpMXHrQfTGmbQ1gKmelCxlSEBUaxhRBj/EFTzpbP4RVSrpEikbmdJobCvhE3g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css" integrity="sha512-sMXtMNL1zRzolHYKEujM2AqCLUR9F2C4/05cdbxjjLSRvMQIciEPCQZo++nk7go3BtSuK9kfa/s+a4f4i5pLkw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="service.css">
+
+    <style>
+      .section
+{
+    width: 100%;
+    background-image: url(img1.jpg);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    margin-top: -8px;
+}
+.title h1
+{
+    text-align: center;
+    padding-top: 50px;
+    font-size: 42px;
+    font-family: cambria;  
+    color: #0a1853;
+}
+.title h1::after
+{
+    content: "";
+    height: 4px;
+    width: 230px;
+    background-color: #0a1853;
+    display: block;
+    margin: auto;
+}
+.button:hover
+{
+    background-color: #054b70;
+    transition: 0.4s ease;
+}
+.lab
+{
+    display: flex;
+    justify-content: center;
+    height: 80vh;
+    background-color: white;
+
+}
+
+.container {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+  }
+  .title2 h1
+{
+    text-align: center;
+    padding-top: 50px;
+    font-size: 30px;
+    font-family: cambria;  
+    color: #010c1a;
+    margin-top: -25px;
+}
+.cards {
+    height: 330px;
+    width: 320px;
+    margin: 50px;
+    box-shadow: 0 0 9px rgba(0,0,0.5);
+    overflow:hidden;
+  }
+ .cards img
+{
+    height:250px;
+    border-radius: 3px;
+    transition: 0.5s;
+}
+.intro
+{
+    height: 70px;
+    width: 320px;
+    padding: 6px;
+    box-sizing: border-box;
+    position: absolute;
+    bottom: 55px;
+    background: rgba(1, 13, 25, 0.5);
+    color: white;
+    transition: 0.5s;
+}
+.cards:hover .intro
+{
+    height: 220px;
+    background: #234e7c;
+
+}
+    </style>
+    
+</head>
+<body>
+    <section id="nav-bar">
+        <nav class="navbar navbar-expand-lg bg-body-tertiary">
+            <div class="container-fluid">
+              <a class="navbar-brand" href="#" style="pointer-events: none;"><img src="navigation.png"></a>
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                  <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="website.html"><b> Home </b></a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#"><b> Services </b></a>
+                    <hr>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="http://localhost/IP%20Project/events.php"><b> Events </b></a>
+                    
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="officers.html"><b> Our Team</b></a>
+                  </li>
+                  
+                  <li class="nav-item">
+                    <a class="nav-link" href="http://localhost/IP%20Project/dorm1.php"><b>Dorm Room Requisition</b></a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="website.html #contact "><b>Contact Us</b></a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </nav>
+    </section>
+    <section id="start">
+        <div class="section">
+          <div class="title">
+            <h1 ><b>Our Services</b></h1>
+          </div>
+          <div class="services">
+            <div class="card">
+              <div class="icon">
+                <i class="fa-solid fa-computer"></i>
+              </div>
+              <h2 style="font-family: cambria;">LABORATORY</h2>
+              <a href="#LABORATORY" class="button">Explore</a>
+            </div>
+            <div class="card">
+              <div class="icon">
+                <i class="fa-solid fa-magnifying-glass-chart"></i>
+              </div>
+              <h2 style="font-family: cambria;">MARKETING SPACE</h2>
+             
+              <a href="#MARKETING" class="button">Explore</a>
+            </div>
+            <div class="card">
+              <div class="icon">
+                <i class="fa-regular fa-microscope"></i>
+              </div>
+              <h2 style="font-family: cambria;">EQUIPMENT SERVICES</h2>
+              
+              <a href="#EQUIP" class="button">Explore</a>
+            </div>
+            <div class="card">
+              <div class="icon">
+                <i class="fa-solid fa-magnifying-glass-chart"></i>
+              </div>
+              <h2 style="font-family: cambria;">START-UPS</h2>
+             
+              <a href="#START" class="button">Explore</a>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section id="LABORATORY" class="lab">
+        
+        <div class="container">
+          <div class="title2">
+            <h1><a href="service2.html#LABORATORYL" style="color: black;" ><b>LABORATORY SERVICES</b></a></h1>
+          </div>
+          <div class="row">
+              <div class="owl-carousel owl-theme">
+                
+          <div class="cards">
+            
+            <img src="labs.JPG" alt="Computer Lab">
+            <div class="intro">
+              <h1>Computer Lab</h1>
+              <p>A dedicated space equipped with computers and technology resources for educational or professional purposes, facilitating learning, research, and practical applications related to IT.
+              </p>
+              
+            </div>
+          </div>
+          <div class="cards">
+            <img src="machine_lab.JPG" alt="Computer Lab">
+            <div class="intro">
+              <h1>Machine Learning Lab</h1>
+              <p>A specialized facility for research, experimentation, and development of algorithms and models that enable computers to learn from and make predictions or decisions based on data. </p>
+            </div>
+          </div>
+          <div class="cards">
+            <img src="robotics.jpg" alt="Computer Lab">
+            <div class="intro">
+              <h1>Robotics Lab</h1>
+              <p>A dedicated workspace for designing, constructing, and testing robots, integrating various disciplines such as mechanical engineering, electronics, and computer programming to advance the field of robotics.</p>
+    
+            </div>
+          </div>
+              </div>
+        </div>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js" integrity="sha512-3gJwYpMe3QewGELv8k/BX9vcqhryRdzRMxVfq6ngyWXwo03GFEzjsUm8Q7RZcHPHksttq7/GFoxjCVUjkjvPdw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js" integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        <script>
+            $('.owl-carousel').owlCarousel({
+        loop:true,
+        margin:10,
+        nav:true,
+        responsive:{
+            0:{
+                items:1
+            },
+            600:{
+                items:2
+            },
+            1000:{
+                items:3
+            }
+        }
+    })
+        </script>
+        </div>
+    
+      </section>
+      <section id="MARKETING" class="lab">
+        
+        <div class="container">
+          <div class="title2">
+            <h1><a href="service2.html#MARKETING" style="color: black;"><b> MARKETING SPACE</b></a></h1>
+          </div>
+          <div class="row">
+              <div class="owl-carousel owl-theme">
+        <div class="cards">
+          <img src="mistri.JPG" alt="Computer Lab">
+          <div class="intro">
+            <h1>Mistri Bazar</h1>
+            <p>Mistri Bazar – A world wide engineering marketplace. Every day, they strive to improve their service to the clients by developing the right blend of technology and creativity to make sure every job done is done as efficiently as possible.</p>
+    
+          </div>
+        </div>
+        <div class="cards">
+          <img src="diligete.JPG" alt="Computer Lab">
+          <div class="intro">
+            <h1>Diligite</h1>
+            <p>Diligite Ltd., an innovation-focused software company, offers high-quality, affordable software and hardware solutions. Through the most efficient use of Technology and Resources.</p>
+          </div>
+        </div>
+        <div class="cards">
+          <img src="rock.JPG" alt="Computer Lab">
+          <div class="intro">
+            <h1>Rockwon IT Global</h1>
+            <p>Rockwon IT Global is a research and development base platform. The platform encourages research on real life problems and develops a real solution.</p>
+    
+          </div>
+        </div>
+        <div class="cards">
+          <img src="workspace.jpg" alt="Computer Lab">
+          <div class="intro">
+            <h1>Chaldal</h1>
+            <p>Chaldal, leading online grocery shop in bangladesh. Products: Groceries,Meat & Fish, Snacks, Bread, Dairy Foods, Frozen & Canned Foods.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js" integrity="sha512-3gJwYpMe3QewGELv8k/BX9vcqhryRdzRMxVfq6ngyWXwo03GFEzjsUm8Q7RZcHPHksttq7/GFoxjCVUjkjvPdw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js" integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script>
+        $('.owl-carousel').owlCarousel({
+    loop:true,
+    margin:10,
+    nav:true,
+    responsive:{
+        0:{
+            items:1
+        },
+        600:{
+            items:2
+        },
+        1000:{
+            items:3
+        }
+    }
+    })
+    </script>
+    </div>
+    
+    
+    </section>
+    <section id="EQUIP" class="lab">
+      <div class="container">
+        <div class="title2">
+          <h1><a href="service2.html#EQUIP" style="color: black;"><b>EQUIPMENT SERVICES</b></a></h1>
+        </div>
+        <div class="row">
+            <div class="owl-carousel owl-theme">
+      
+      <div class="cards">
+        <img src="arduino.jpeg" alt="Computer Lab">
+        <div class="intro">
+          <h1>Arduino</h1>
+          <p>Arduino is an open-source platform used for building electronics projects. Arduino consists of both a physical programmable circuit board and a piece of software, or IDE that runs on your computer, used to write and upload computer code to the physical board.</p>
+    
+        </div>
+      </div>
+      <div class="cards">
+        <img src="sensor.jpeg" alt="Computer Lab">
+        <div class="intro">
+          <h1>Sensor</h1>
+          <p>A sensor is a device that measures physical input from its environment and converts it into data that can be interpreted by either a human or a machine. </p>
+        </div>
+      </div>
+      <div class="cards">
+        <img src="robot.jpg" alt="Computer Lab">
+        <div class="intro">
+          <h1>Robotics Equipments</h1>
+          <p>Robotic Devices means a machine or device, which includes mechanical components, logic circuitry, computing components, software and/or other specialized components, that (i) operates automatically, semi-automatically, interactively or by remote control.</p>
+    
+        </div>
+      </div>
+      <div class="cards">
+        <img src="arduino.jpeg" alt="Computer Lab">
+        <div class="intro">
+          <h1>Arduino</h1>
+          <p>Arduino is an open-source platform used for building electronics projects. Arduino consists of both a physical programmable circuit board and a piece of software, or IDE that runs on your computer, used to write and upload computer code to the physical board.</p>
+    
+        </div>
+      </div>
+    
+    </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js" integrity="sha512-3gJwYpMe3QewGELv8k/BX9vcqhryRdzRMxVfq6ngyWXwo03GFEzjsUm8Q7RZcHPHksttq7/GFoxjCVUjkjvPdw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js" integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script>
+        $('.owl-carousel').owlCarousel({
+    loop:true,
+    margin:10,
+    nav:true,
+    responsive:{
+        0:{
+            items:1
+        },
+        600:{
+            items:2
+        },
+        1000:{
+            items:3
+        }
+    }
+    })
+    </script>
+    </div>
+    
+    </section>
+    <section id="START" class="lab">
+      <div class="container">
+        <div class="title2">
+          <h1><a href="service2.html#START" style="color: black;"><b>START-UPS</b></a></h1>
+        </div>
+        <div class="row">
+            <div class="owl-carousel owl-theme">
+      
+      <div class="cards">
+        <img src="PDA.JPG" alt="Computer Lab">
+        <div class="intro">
+          <h1>PDA</h1>
+          <p>PDA, a startup :" We will work in the tech giant and automobile sector as an import substitute industry. We will work to increase foreign investment in our projects."</p>   
+        </div>
+      </div>
+
+         <div class="cards">
+        <img src="banana.JPG" alt="Computer Lab">
+        <div class="intro">
+          <h1>Banana</h1>
+          <p>Banana pad stands as a distinguished national champion startup, driven by the noble mission of revolutionizing the sanitary pad market.</p>
+         
+        </div>
+        
+      </div>
+
+         <div class="cards">
+        <img src="tripdesk.JPG" alt="Computer Lab">
+        <div class="intro">
+          <h1>Trip Desk</h1>
+          <p>Tripdesk is a user-friendly travel planning platform that simplifies the process of booking accomodations and tourist guides. It offers virtual tours and destination information to ensure a smooth and enjoyable travel experience. </p>
+         
+        </div>
+        
+      </div>
+      
+    </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js" integrity="sha512-3gJwYpMe3QewGELv8k/BX9vcqhryRdzRMxVfq6ngyWXwo03GFEzjsUm8Q7RZcHPHksttq7/GFoxjCVUjkjvPdw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js" integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script>
+        $('.owl-carousel').owlCarousel({
+    loop:true,
+    margin:10,
+    nav:true,
+    responsive:{
+        0:{
+            items:1
+        },
+        600:{
+            items:2
+        },
+        1000:{
+            items:3
+        }
+    }
+    })
+    </script>
+    </div>
+    
+    </section>
+     
+      </body>
+    </html>

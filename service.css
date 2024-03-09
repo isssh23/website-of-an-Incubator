@@ -1,0 +1,112 @@
+*{
+    margin:0px;
+    padding:0px;
+    box-sizing: border-box;
+    font-family: cambria;
+}
+
+nav ul{
+  float:right;
+}
+html{
+    scroll-behavior: smooth;
+    transition: ease-in-out;
+    transition-delay: 1s;
+  }
+
+nav li a{
+  font-family:cambria;
+  padding: 0 10px;
+  color: #fff;
+}
+
+.services
+{
+    width: 100%;
+    height: 300px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 75px auto;
+    text-align: center;
+}
+.card
+{
+    width: 100%;
+    height: 220px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    margin: 0px 20px;
+    padding: 20px 20px;
+    background-color: #efefef;
+    border-radius: 10px;
+    cursor: pointer;
+}
+.card:hover
+{
+    background-color: #b8d4de;
+    transition: ease;
+}
+.card .icon
+{
+    font-size:35px;
+    margin-bottom: 10px;
+}
+.card .h2
+{
+    font-size:28px;
+    font-family: cambria;
+    /*color: #c94f4f;*/
+    margin-bottom: 20px;
+}
+.button
+{
+    font-size: 15px;
+    font-family: cambria;
+    text-decoration: none;
+    color: #fff;
+    background-color: #0a1853;
+    padding: 8px 12px;
+    border-radius: 20px;
+    letter-spacing: 1px;
+}
+
+
+
+
+
+
+  
+
+h1
+{
+    margin: 10px;
+    font-size: 30px;
+    font-family: cambria;
+    color: #fff;
+}
+p
+{
+    font-size: 13.5px;
+    font-family: cambria;
+    margin: 28px;
+    visibility: hidden;
+    opacity: 0;
+}
+
+.cards:hover
+{
+    cursor: pointer;
+}
+
+.cards:hover p
+{
+    opacity: 1;
+    visibility:visible ;
+}
+.cards:hover img
+{
+    transform: scale(1.1) rotate(-3deg);
+}

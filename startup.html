@@ -1,0 +1,89 @@
+<html>
+<head>
+	<title>
+		Startup_page
+	</title>
+	<link href="startup.css" rel="stylesheet">
+	<style>
+		body {
+  background-image: linear-gradient(
+      rgba(102, 102, 118, 0.695),
+      rgba(102, 102, 118, 0.695)
+    ),
+    url(img/apply2.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+}
+		button[type="submit"] {
+  display: block;
+  margin: 20px auto;
+  padding: 10px 20px;
+  font-size: 20px;
+  margin-left: 25px;
+}
+	</style>
+</head>
+<body>
+	<div class="main">
+		<div class="reserve">
+			<h2 style="margin-left: -25px;">Drop Your Idea</h2>
+		
+		<div class="form-box">
+			<form action="https://formspree.io/f/mgebjoee" id="formback" method="post">
+			<label>Name:</label>
+			<br>
+			<input type="full_name" id="Full_name" name="Full_name" required>
+			<br><br>
+			<label>E-Mail:</label>
+			<br>
+			<input type="email" id="Email" name="Email" required>
+			<br><br>
+			<label>Startup Name:</label>
+			<br>
+			<input type="text" id="Startup" name="Startup" required>
+			<br><br>
+			<label>Tell us about your thought:</label>
+			<br>
+			<input type="textarea" id="About_your_idea" name="About_your_idea" required>
+			<br><br>
+			<label>How much funding are you seeking?</label>
+			<br>
+			<input type="number" name="Fund_amount" min="0" maxlength="11" required>
+			<br><br>
+			<label>Number of desks you required?</label>
+			<br>
+			<input type="number" name="No_of_desks" min="0" maxlength="11" required>
+			<br><br>
+			<label>Upload your pitch deck:</label>
+			<br>
+			<input type="file" id="Pitch" name="Pitch" accept=".pdf,.ppt,.pptx" required>
+			<br><br>
+			<label>Enter Phone:</label>
+			<br>
+			<input type="number" name="Phone" min="0" maxlength="11" required>
+		    <br><br>
+			<button type="submit" class="btn">Submit</button>
+			<button type="submit" id="submit" class="btn" style ="margin-top: -67px; margin-left: 240px;" onclick="resetform()">Back</button>
+			<br>
+</form>
+</div>
+</div>
+</div>
+<script>
+	document.querySelectorAll('input[type="number"]').forEach(input=>{
+    input.oninput =() =>
+	{
+		if(input.value.length > input.maxLength) input.value= input.value.slice(0, input.maxLength);
+
+	}
+	})
+</script>
+<script>
+	function resetform(){
+		document.getElementById("formback").reset();
+		window.location.href = "http://localhost/IP%20Project/apply.html"; 
+	}
+</script>
+</body>
+</html>

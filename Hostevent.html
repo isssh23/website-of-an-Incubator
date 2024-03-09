@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Events</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="events.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.1/css/fontawesome.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css">
+    <style>
+        .btn-primary{
+        margin: 12px auto 24px 460px;
+        width: 200px;
+        height: 50px;
+        border: none;
+        border-radius: 50px;
+        background-color: #234e7c;
+    }
+    .btn-primary:hover{
+    background-image: linear-gradient(to right,#000080,#2e67a5);
+  }
+  .btn-six{
+        margin: -2px auto 24px 2px;
+        width: 50px;
+        height: 50px;
+        border: none;
+        border-radius: 50px;
+        background-color: #234e7c;
+    }
+    .btn-six:hover{
+    background-image: linear-gradient(to right,#000080,#2e67a5);
+  }
+ 
+  .message{
+    width: 1150px;
+    height: 720px;
+    margin: 5px 0 0 85px;
+    position: absolute;
+    top: 0;
+    left: 45%;
+    transform: translate(-50%,-50%) scale(0.1);
+    background-image: linear-gradient(rgba(100, 98, 98, 0.8),rgba(117, 115, 115, 0.8)),url(contact.jpg);
+    box-shadow: 0 0 9px rgba(0,0,0.5);
+    border-radius: 50px;
+    background-size: cover;
+    padding: 30px;
+    visibility: hidden;
+   }
+   .open-popup{
+    visibility: visible;
+    top: 88%;
+    transform: translate(-50%,-50%) scale(1);
+    transition: transform 0.4s, top 0.4s;
+   }
+   .container#blur.active{
+    filter: blur(5px);
+    pointer-events: none;
+   }
+   .message .btn{
+    width: 100%;
+    height: 40px;
+    border-radius: 50px;
+    background-color: rgb(25, 70, 136);
+    font-family: cambria;
+    font-size: 25px;
+    color:#ffffff;
+   }
+    </style>
+    </head>
+    <body>
+        <section id="nav-bar" >
+            <nav class="navbar navbar-expand-lg bg-body-tertiary">
+                <div class="container-fluid">
+                  <a class="navbar-brand" href="#" style="pointer-events: none;"><img src="navigation.png"></a>
+                  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                  </button>
+                  <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                      <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="website.html"><b> Home </b></a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="service.html"><b> Services </b></a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="#"><b> Events </b></a>
+                        <hr>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="#"><b> Our Team</b></a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="#"><b>Dorm Room Requisition</b></a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="website.html #contact "><b>Contact Us</b></a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </nav>
+        </section>
+        <div class="line"></div>
+        <div class="line"></div>
+        <div class="line"></div>
+        <div class="container">
+            <h2 style="font-family: cambria; color: #234e7c; font-weight: bold; font-size: 50px; text-align: center;">InnovationHub</h2>
+            <p style="font-family: cambria; text-align: center;color: #234e7c;font-size: 20px;margin: -10px 0 0 0;">
+                Want to organize your event or webinar at IT Business Incubator?<br>Sheikh Kamal IT Business Incubator only hosts public events linked with innovation and entrepreneurship.<br> Whether you want a conference with 300+ attendes, a webinar, a small size workshop, a brainstorming or even a party... <br>the campus offers 7 different event spaces to match your needs.</p>
+            <button type="submit" class="btn btn-primary" onclick="openPopup()"><a class="nav-link" href="#" style="font-family: cambria; font-size: 20px;"><b>Get event</b></a></button>
+            
+          </div>
+          <br>
+          <div class="container" id="blur">
+            <div class="row">
+              <div class="col-md-6 wow fadeInLeft" style="animation-delay: 0.5s;">
+                <div class="card" style="background-color: #234e7c; margin: 2px 0 0 -50px;">
+                  <h3 style="font-family: cambria; font-weight: bold;color: #ffffff;">Auditorium</h3>
+                  <p style="font-family: cambria;font-size: 17px; color: #ffffff;">An intimate stage with powerful equipment, ideal for demo pitches of startups changing the world and workshops building the future</p>
+                  <p style="font-family: cambria;font-size: 17px; color: #ffffff;"><b>Location:</b> Multipurpose Building,6th Floor</p>
+                  <img src="auditorium.JPG">
+                  <label style="font-family: cambria; font-size: 22px; color: #ffffff;">145 seats</label>
+                </div>
+              </div>
+
+              <div class="col-md-6 wow fadeInLeft" style="animation-delay: 1s;">
+                <div class="card" style="background-color: #234e7c;margin: 2px 0 0 15px;">
+                  <h3 style="font-family: cambria; font-weight: bold;color: #ffffff;">Mini Conference Room</h3>
+                  <p style="font-family: cambria;font-size: 17px; color: #ffffff;">A fully equipped room in the middle of IT Incubator's SHARE Zone to welcome up to 100 guests for conferences and networking.</p>
+                  <p style="font-family: cambria;font-size: 17px; color: #ffffff;"><b>Location:</b> Multipurpose Building,5th Floor</p>
+                  <img src="minicon.JPG">
+                  <label style="font-family: cambria; font-size: 22px; color: #ffffff;">9 to 10 seats</label>
+                </div>
+              </div>
+            </div>
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="row">
+              <div class="col-md-6 wow fadeInLeft" style="animation-delay: 0.5s;">
+                <div class="card" style="background-color: #234e7c; margin: 2px 0 0 -50px;">
+                  <h3 style="font-family: cambria; font-weight: bold;color: #ffffff;">Meeting Room</h3>
+                  <p style="font-family: cambria;font-size: 17px; color: #ffffff;">An intimate stage with powerful equipment, ideal for demo pitches of startups changing the world and workshops building the future</p>
+                  <p style="font-family: cambria;font-size: 17px; color: #ffffff;"><b>Location:</b> Multipurpose Building,6th Floor</p>
+                  <img src="meeting.JPG">
+                  <label style="font-family: cambria; font-size: 22px; color: #ffffff;">10 seats </label>
+                </div>
+              </div>
+
+              <div class="col-md-6 wow fadeInLeft" style="animation-delay: 1s;">
+                <div class="card" style="background-color: #234e7c;margin: 2px 0 0 15px;">
+                  <h3 style="font-family: cambria; font-weight: bold;color: #ffffff;">Labs for Training Program</h3>
+                  <p style="font-family: cambria;font-size: 17px; color: #ffffff;">1. Machine Lab; 2. Computer Lab; 3.Robotics Lab <br>for practical trainings</p>
+                  <p style="font-family: cambria;font-size: 17px; color: #ffffff;"><b>Location:</b> Multipurpose Building, 5th Floor</p>
+                  <img src="labs.jpg">
+                  <label style="font-family: cambria; font-size: 22px; color: #ffffff;">24 seats per lab</label>
+                </div>
+              </div>
+            </div>
+
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="row">
+              <div class="col-md-6 wow fadeInLeft" style="animation-delay: 0.5s;">
+                <div class="card" style="background-color: #234e7c; margin: 2px 0 0 -50px;">
+                  <h3 style="font-family: cambria; font-weight: bold;color: #ffffff;">Rozy Jamal Dormitory</h3>
+                  <p style="font-family: cambria;font-size: 17px; color: #ffffff;">A place for staying only for females. </p>
+                  <img src="incubator5.jpg">
+                  <label style="font-family: cambria; font-size: 22px; color: #ffffff;">40 seats</label>
+                </div>
+              </div>
+
+              <div class="col-md-6 wow fadeInLeft" style="animation-delay: 1s;">
+                <div class="card" style="background-color: #234e7c;margin: 2px 0 0 15px;">
+                  <h3 style="font-family: cambria; font-weight: bold;color: #ffffff;">Sheikh Jamal Dormitory</h3>
+                  <p style="font-family: cambria;font-size: 17px; color: #ffffff;">A place for staying only for males.</p>
+                  <img src="incubator4.jpg">
+                  <label style="font-family: cambria; font-size: 22px; color: #ffffff;">40 seats</label>
+                </div>
+              </div>
+            </div>
+          </div>
+          <form action="https://formspree.io/f/mgebjoee" method="post">
+            <div clas="col-md-8">
+              <div class="contactform">
+                <div class="row">
+                  <div class="col-md-8">
+                    <span id="lblresponse" class="tab-content"></span>
+                  </div>
+                </div>  
+                <div class="line"></div>
+                <div class="message" id="popup" >
+                <div class="row">
+                  <h2 style="text-align: center; font-family: cambria; font-weight: bold; color: rgb(253, 253, 253);">Organize your Event</h2>
+                  <button onclick="closePopup()" style="font-family: cambria;font-weight: bold;font-size: 17px; width: 75px;height: 35px;color: #234e7c;margin: -58px 0 0 1022px;">Close</button>
+                  <div class="col-md-6">
+                    <label style="font-family: cambria;color: white;font-weight: bold;font-size: 18px;">Start Date & Time</label>
+                    <input type="datetime-local" name="datetimeTo" min="2023-06-24 09:00" id="datetimeTo" class="form-control my-2"  placeholder="Name" required> 
+                    
+                  </div>
+                  <br>
+                  <div class="col-md-6">
+                    <label style="font-family: cambria;color: white;font-weight: bold;font-size: 18px;">End Date & Time</label>
+                    <input type="datetime-local" name="datetimeTo" min="2023-06-24 09:00" id="datetimeTo" class="form-control my-2"  placeholder="Name" required> 
+                  </div>
+                  <br>
+                </div>
+                <div class="row ">
+                  
+                  <div class="col-md-6">
+                    <label style="font-family: cambria;color: white;font-weight: bold;font-size: 18px;">Company</label>
+                    <input type="text" placeholder="IT Incubator" id="formulate--events-venues-4" class="form-control my-2" name="company"required>
+                  </div>
+                  <br>
+                  <div class="col-md-6">
+                    <label style="font-family: cambria;color: white;font-weight: bold;font-size: 18px;">Number of Attendees</label>
+                    <input type="number" placeholder="50" min="1" id="formulate--events-venues-3" class="form-control my-2" name="numberOfPeople" required>
+                  </div>
+                </div>
+                <div class="row ">
+                  <div class="col-md-6">
+                    <label style="font-family: cambria;color: white;font-weight: bold;font-size: 18px;">Name</label>
+                    <input type="text" placeholder="Name" id="formulate--events-venues-5" class="form-control my-2" name="Name" required>
+                  </div>
+                  <br>
+                  <div class="col-md-6">
+                    <label style="font-family: cambria;color: white;font-weight: bold;font-size: 18px;">Email</label>
+                    <input type="email" placeholder="Email" id="formulate--events-venues-6" class="form-control my-2" name="Email" required>
+                  </div>
+                </div>
+                <div class="row ">
+                  <div class="col-md-6">
+                    <label style="font-family: cambria;color: white;font-weight: bold;font-size: 18px;">Phone</label>
+                    <input type="tel" placeholder="01...." id="formulate--events-venues-8" class="form-control my-2" name="phone">
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-md-12">
+                    <textarea name="meassage" id="message" cols="200" rows="10" class="form-control my-2" placeholder="Event Description" required></textarea>
+                  </div>
+                </div>
+                <button type="submit" class="btn btn-six" onclick="closePopup()"><a class="nav-link" href="#" style=" font-family: cambria; font-size: 20px;"><b>Confirm Event</b></a></button>
+              </div>
+            </div>
+            </div>
+          </form>
+
+
+
+
+
+
+
+        <script src="	https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" ></script>
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.7/dist/umd/popper.min.js" integrity="sha384-zYPOMqeu1DAVkHiLqWBUTcbYfZ8osu1Nd6Z89ify25QV9guujx43ITvfi12/QExE" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.min.js" integrity="sha384-Y4oOpwW3duJdCWv5ly8SCFYWqFDsfob/3GkgExXKV4idmbt98QcxXYs9UoXAB7BZ" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+        <script> 
+            new WOW().init();
+         </script>
+         <script>
+          let popup=document.getElementById("popup");
+          var blur = document.getElementById("blur");
+          function openPopup()
+          {
+            popup.classList.add("open-popup");
+            blur.classList.toggle("active");
+          }
+          function closePopup()
+          {
+            popup.classList.remove("open-popup");
+            blur.classList.toggle("active");
+          }
+        
+         </script>
+    </body>
+</html>
